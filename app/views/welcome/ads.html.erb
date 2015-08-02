@@ -1,0 +1,18 @@
+<script type="text/javascript"> 
+var TencentGDT = TencentGDT || [];
+TencentGDT.push({
+posid: '6080102503006344',
+appid:'1102151323',
+type: 'interstitial',
+showmask:true,//如果不需要遮罩可以置为false
+onClose:function(){console.log('close');},//广告关闭时的回调 
+onFail:function(){console.log('fail');},//广告失败是不会弹出插屏，在这个函数中进行回调
+onInterstitialLoaded:function(){GDT.showWindow();}//选择合适的时机调用GDT.showWindow()出现广告
+});
+(function() {
+var doc=document, h=doc.getElementsByTagName('head')[0], s=doc.createElement('script');
+s.async=true; s.src='http://qzs.qq.com/qzone/biz/res/i.js';
+h && h.insertBefore(s,h.firstChild);
+})();
+</script>
+<h1>广点通插屏广告测试</h1>
